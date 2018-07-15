@@ -6,11 +6,11 @@ import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
-  ],
-  exports: [
     CommonModule,
     FormsModule,
-    HttpClientModule,
+    HttpClientModule
+  ],
+  exports: [
     CkEditorComponent
   ],
   declarations: [CkEditorComponent]

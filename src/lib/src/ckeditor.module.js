@@ -16,11 +16,12 @@ var CkeditorModule = /** @class */ (function () {
     }
     CkeditorModule = __decorate([
         core_1.NgModule({
-            imports: [],
-            exports: [
+            imports: [
                 common_1.CommonModule,
                 forms_1.FormsModule,
-                http_1.HttpClientModule,
+                http_1.HttpClientModule
+            ],
+            exports: [
                 ck_editor_component_1.CkEditorComponent
             ],
             declarations: [ck_editor_component_1.CkEditorComponent]
