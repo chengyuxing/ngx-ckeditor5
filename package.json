@@ -7,7 +7,8 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "tsc -p .",
         "rebuild": "rm -rf src/lib && npm run build",
-        "publish": "npm run build && npm publish"
+        "publish": "npm publish",
+        "version": "npm version prerelease"
     },
     "repository": {
         "type": "git",
