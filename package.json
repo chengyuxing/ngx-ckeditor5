@@ -8,7 +8,8 @@
         "build": "tsc -p .",
         "rebuild": "rm -rf ./lib && npm run build",
         "publish": "npm publish",
-        "version": "npm version prerelease"
+        "prerelease": "npm version prerelease",
+        "preminor": "npm version preminor"
     },
     "repository": {
         "type": "git",
