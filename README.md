@@ -92,3 +92,25 @@ export class AppComponent {
 | Input   | readOnly     | boolean  | Yes        | false                                     | Enable / disable editable.                                   |
 | Two-way | ngModel      | string   | Yes        |                                           | Two-way binding the ckeditor's content.                      |
 
+## Warn
+
+This component's property `type` and imported js relation:
+
+```html
+// classic
+<script src="https://cdn.ckeditor.com/ckeditor5/10.1.0/classic/ckeditor.js"></script>
+// ...translations/....js
+
+// balloon
+<script src="https://cdn.ckeditor.com/ckeditor5/10.1.0/balloon/ckeditor.js"></script>
+// ...translations/....js
+
+// decoupled
+<script src="https://cdn.ckeditor.com/ckeditor5/10.1.0/decoupled-document/ckeditor.js"></script>
+// ...translations/....js
+
+// inline
+<script src="https://cdn.ckeditor.com/ckeditor5/10.1.0/inline/ckeditor.js"></script>
+// ...translations/....js
+```
+
