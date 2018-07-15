@@ -5,7 +5,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  imports: [],
+  imports: [
+    CommonModule,
+    FormsModule,
+    HttpClientModule,
+  ],
   exports: [
     CommonModule,
     FormsModule,
