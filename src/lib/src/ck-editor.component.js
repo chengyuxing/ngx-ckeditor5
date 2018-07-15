@@ -63,7 +63,6 @@ var CkEditorComponent = /** @class */ (function () {
     CkEditorComponent.prototype.ngAfterViewInit = function () {
         this.destoryCkEditor();
         this.initCkeditor();
-        this.ckInstance.then(function (editor) { return console.log(editor); });
     };
     CkEditorComponent.prototype.ngOnDestroy = function () {
         this.destoryCkEditor();

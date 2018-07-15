@@ -128,7 +128,6 @@ export class CkEditorComponent implements OnInit, AfterViewInit, OnDestroy, Cont
   ngAfterViewInit(): void {
     this.destoryCkEditor();
     this.initCkeditor();
-    this.ckInstance.then(editor => console.log(editor));
   }
 
   ngOnDestroy(): void {
