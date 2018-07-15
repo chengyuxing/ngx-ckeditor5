@@ -25,6 +25,7 @@ var CkeditorModule = /** @class */ (function () {
                 common_1.CommonModule,
                 forms_1.FormsModule,
                 http_1.HttpClientModule,
+                ck_editor_component_1.CkEditorComponent
             ],
             declarations: [ck_editor_component_1.CkEditorComponent]
         })

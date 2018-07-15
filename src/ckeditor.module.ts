@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     FormsModule,
     HttpClientModule,
+    CkEditorComponent
   ],
   declarations: [CkEditorComponent]
 })
