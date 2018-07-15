@@ -1,12 +1,12 @@
 {
     "name": "ngx-ckeditor5",
-    "version": "1.0.1-7",
+    "version": "1.0.1-8",
     "description": "angular5,6 support ckeditor5.1.",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "tsc -p .",
-        "rebuild": "rm -rf src/lib && npm run build",
+        "rebuild": "rm -rf ./lib && npm run build",
         "publish": "npm publish",
         "version": "npm version prerelease"
     },

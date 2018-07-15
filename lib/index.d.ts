@@ -1,1 +1,1 @@
-export * from './src/ckeditor.module';
+export * from './ckeditor.module';
