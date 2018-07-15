@@ -2,7 +2,7 @@
     "name": "ngx-ckeditor5",
     "version": "1.2.0-0",
     "description": "angular5,6 support ckeditor5.1.",
-    "main": "index.js",
+    "main": "lib/src/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "tsc -p .",
@@ -19,9 +19,6 @@
         "ckeditor5",
         "angular5",
         "angular6"
-    ],
-    "files": [
-        "lib"
     ],
     "author": "chengyuxing",
     "license": "MIT",
