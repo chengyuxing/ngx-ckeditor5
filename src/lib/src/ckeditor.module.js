@@ -10,7 +10,6 @@ var core_1 = require("@angular/core");
 var ck_editor_component_1 = require("./ck-editor.component");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/common/http");
-var upload_adapter_1 = require("./upload-adapter");
 var CkeditorModule = /** @class */ (function () {
     function CkeditorModule() {
     }
@@ -19,9 +18,7 @@ var CkeditorModule = /** @class */ (function () {
             imports: [],
             exports: [
                 forms_1.FormsModule,
-                http_1.HttpClientModule,
-                upload_adapter_1.UploadAdapter,
-                upload_adapter_1.ResponseMessage
+                http_1.HttpClientModule
             ],
             declarations: [ck_editor_component_1.CkEditorComponent]
         })
