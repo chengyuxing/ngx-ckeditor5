@@ -10,6 +10,7 @@ var core_1 = require("@angular/core");
 var ck_editor_component_1 = require("./ck-editor.component");
 var forms_1 = require("@angular/forms");
 var http_1 = require("@angular/common/http");
+var common_1 = require("@angular/common");
 var CkeditorModule = /** @class */ (function () {
     function CkeditorModule() {
     }
@@ -17,8 +18,9 @@ var CkeditorModule = /** @class */ (function () {
         core_1.NgModule({
             imports: [],
             exports: [
+                common_1.CommonModule,
                 forms_1.FormsModule,
-                http_1.HttpClientModule
+                http_1.HttpClientModule,
             ],
             declarations: [ck_editor_component_1.CkEditorComponent]
         })
