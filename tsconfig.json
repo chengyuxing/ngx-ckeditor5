@@ -1,0 +1,30 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "outDir": "./src/lib",
+    "sourceMap": true,
+    "declaration": true,  //生成.d.ts
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "target": "es5",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2015",
+      "es2016",
+      "es2017",
+      "dom"
+    ],
+  },
+  // "files": [
+  //   "index.ts",
+  //   "index.d.ts",
+  //   "src/lib/*.*"
+  // ],
+  "exclude": [
+    "node_modules"
+  ]
+}

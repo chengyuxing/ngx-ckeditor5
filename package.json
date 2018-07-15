@@ -1,0 +1,38 @@
+{
+    "name": "ngx-ckeditor5",
+    "version": "1.0.0",
+    "description": "angular5,6 support ckeditor5.1.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc -p .",
+        "rebuild": "rm -rf src/lib && npm run build",
+        "publish": "npm run build && npm publish"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/chengyuxing/ngx-ckeditor5.git"
+    },
+    "keywords": [
+        "ckeditor5",
+        "angular5",
+        "angular6"
+    ],
+    "author": "chengyuxing",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/chengyuxing/ngx-ckeditor5/issues"
+    },
+    "homepage": "https://github.com/chengyuxing/ngx-ckeditor5#readme",
+    "dependencies": {
+        "@angular/common": "^6.0.9",
+        "@angular/core": "^6.0.9",
+        "@angular/forms": "^6.0.9",
+        "rxjs": "^6.2.2"
+    },
+    "devDependencies": {
+        "@types/node": "^10.5.2",
+        "ts-loader": "^4.4.2",
+        "typescript": "^2.9.2"
+    }
+}
