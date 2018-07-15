@@ -6,9 +6,6 @@ import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
-    CommonModule,
-    FormsModule,
-    HttpClientModule,
   ],
   exports: [
     CommonModule,

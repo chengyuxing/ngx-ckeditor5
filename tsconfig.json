@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "./src/lib",
     "sourceMap": true,
-    "declaration": true,  //生成.d.ts
+    "declaration": true, //生成.d.ts
     "module": "commonjs",
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
@@ -20,9 +20,13 @@
     ],
   },
   // "files": [
-  //   "index.ts",
-  //   "index.d.ts",
-  //   "src/lib/*.*"
+  //   // "src/lib/index.js",
+  //   // "src/lib/index.d.ts",
+  //   // "src/lib/src/*.js",
+  //   // "src/lib/src/*.d.ts",
+  //   // "README.md",
+  //   // "LICENSE",
+  //   // "package.json"
   // ],
   "exclude": [
     "node_modules"
