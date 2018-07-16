@@ -1,8 +1,8 @@
 # ngx-ckeditor5
 
-**The CKEditor5 component for angular(2.x,4.x,5.x,6.x).**
+The CKEditor5 component for angular(2.x,4.x,5.x,6.x).
 
-Before use this component , I think you already use the ckeditor5 on your normal js project.
+Before use this component , I think you already use the [ckeditor5](https://ckeditor.com/ckeditor-5/) on your normal js project.
 
  ## Installation 
 
@@ -32,7 +32,7 @@ Before use this component , I think you already use the ckeditor5 on your normal
 
 ## Sample
 
-Import `CkeditorModule` module in your man module:
+Import `CkeditorModule` module in your main module:
 
 ```typescript
 // app.compoennt.ts
@@ -80,7 +80,7 @@ export class AppComponent {
 
 ```
 
-## `CKEditorCompoennt` options
+## `CKEditorComponent` options
 
 | Type    | Name         | DataType | Allow Null | Default Value                             | Description                                                  |
 | ------- | ------------ | -------- | ---------- | ----------------------------------------- | ------------------------------------------------------------ |

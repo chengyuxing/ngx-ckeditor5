@@ -7,7 +7,7 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "tsc -p .",
         "rebuild": "rm -rf ./lib && npm run build",
-        "publish": "npm publish --registry=https://registry.npmjs.org/",
+        "publish": "npm publish",
         "prerelease": "npm version prerelease",
         "preminor": "npm version preminor"
     },
