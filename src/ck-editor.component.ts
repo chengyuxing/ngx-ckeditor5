@@ -174,7 +174,7 @@ export class CkEditorComponent implements OnInit, AfterViewInit, OnDestroy, Cont
   }
 
   private initOtherEditor(opt: any) {
-    CKEditors[this.type].create(this.textarea.nativeElement, opt)
+     this.ckInstance = CKEditors[this.type].create(this.textarea.nativeElement, opt)
       .then(editor => {
         editor.isReadOnly = this.readOnly;
         if (!opt.useCkfinder) {
