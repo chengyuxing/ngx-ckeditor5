@@ -37,11 +37,8 @@ export declare class CkEditorComponent implements OnInit, AfterViewInit, OnDestr
     option(): {
         [key: string]: any;
     };
-    /**
-     * 注册事件
-     * @param editor 编辑器实例
-     */
     private registerHandle;
     private registerUploadAdapter;
     private handleChange;
+    private set2Array;
 }
