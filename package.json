@@ -16,9 +16,12 @@
         "url": "git+https://github.com/chengyuxing/ngx-ckeditor5.git"
     },
     "keywords": [
+        "ckeditor",
         "ckeditor5",
+        "angular",
         "angular5",
-        "angular6"
+        "angular6",
+        "ngx"
     ],
     "files": [
         "lib/src"
