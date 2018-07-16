@@ -174,7 +174,7 @@ export class CkEditorComponent implements OnInit, AfterViewInit, OnDestroy, Cont
   }
 
   private initOtherEditor(opt: any) {
-     this.ckInstance = CKEditors[this.type].create(this.textarea.nativeElement, opt)
+    this.ckInstance = CKEditors[this.type].create(this.textarea.nativeElement, opt)
       .then(editor => {
         editor.isReadOnly = this.readOnly;
         if (!opt.useCkfinder) {
@@ -201,44 +201,43 @@ export class CkEditorComponent implements OnInit, AfterViewInit, OnDestroy, Cont
     return option;
   }
 
-  /**
-   * 注册事件
-   * @param editor 编辑器实例
-   */
   private registerHandle(editor: any) {
-
     const editorElement = <HTMLDivElement>editor.ui.view.editable.element;
-    const toolbarElement = <HTMLDivElement>editor.ui.view.toolbar.element;
+    let toolbarElement: HTMLDivElement;
+    const normalToolbar = editor.ui.view.toolbar;
+    if (normalToolbar) {
+      toolbarElement = normalToolbar.element;
+    } else {
+      const balloonElementSet = <Set<HTMLDivElement>>editor.ui.focusTracker._elements;
+      const balloonElementArr = this.set2Array(balloonElementSet);
+      const balloonToolbar = balloonElementArr[2];
+      toolbarElement = balloonToolbar;
+    }
     const imageFileInput = <HTMLInputElement>toolbarElement.getElementsByClassName('ck-file-dialog-button')[0].lastChild;
 
-    // 内容部分change事件
     editorElement.onkeyup = () => {
       this.ngZone.run(() => {
         this.handleChange(editor);
       });
     };
 
-    // 内容部分click事件
     editorElement.onclick = () => {
       this.ngZone.run(() => {
         this.handleChange(editor);
       });
     };
 
-    // 工具栏点击事件
     toolbarElement.onclick = () => {
       this.ngZone.run(() => {
         this.handleChange(editor);
       });
     };
 
-    // 点击上传图片后触发事件
     imageFileInput.onchange = () => {
       this.handleChange(editor);
     };
   }
 
-  // 注册自定义文件上传适配器
   private registerUploadAdapter(editor, url, maxSize) {
     editor.plugins.get('FileRepository').createUploadAdapter = loader => new UploadAdapter(this.http, loader, url, maxSize);
   }
@@ -251,5 +250,15 @@ export class CkEditorComponent implements OnInit, AfterViewInit, OnDestroy, Cont
       this.propagateTouch();
       this.change.emit(data);
     }
+  }
+
+  private set2Array(set: Set<any>): Array<any> {
+    const arr = [];
+    if (set.size > 0) {
+      set.forEach(item => {
+        arr.push(item);
+      });
+    }
+    return arr;
   }
 }
