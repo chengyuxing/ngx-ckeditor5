@@ -114,3 +114,8 @@ This component's property `type` and imported js relation:
 // ...translations/....js
 ```
 
+## Update Logs
+
+- `2017-7-16 14:23` fixed the ngModel bug.
+- `2017-7-16 18:05` fixed the BalloonEditor's toolbar handle bug.
+
