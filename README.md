@@ -4,7 +4,7 @@ The CKEditor5 component for angular(2.x,4.x,5.x,6.x).
 
 Before use this component , I think you already use the [ckeditor5](https://ckeditor.com/ckeditor-5/) on your normal js project.
 
- ## Installation 
+## Installation
 
 - Import CKEditor js file , and language js file , in angular.json or index.html
 
