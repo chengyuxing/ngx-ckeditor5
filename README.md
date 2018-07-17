@@ -92,9 +92,9 @@ export class AppComponent {
 | Input   | readOnly     | boolean  | Yes        | false                                     | Enable / disable editable.                                   |
 | Two-way | ngModel      | string   | Yes        |                                           | Two-way binding the ckeditor's content.                      |
 
-## Warn
+## Notices
 
-This component's property `type` and imported js relation:
+- This component's property `type` and imported js relation:
 
 ```html
 // classic
@@ -114,8 +114,42 @@ This component's property `type` and imported js relation:
 // ...translations/....js
 ```
 
+- If you get exception or have trouble on image upload operation, please check your `uploadConfig.url` ,and your server response have to include url property at least, `response.url` use to return the uploaded image, and it worked!
+
+**Example:**
+
+```java
+// upload method
+@PostMapping("/upload/one")
+	public Map<String, Object> upload(MultipartFile upload) throws IllegalStateException, IOException{
+		upload.transferTo(new File("/users/chengyuxing/其他/"+upload.getOriginalFilename()));
+		Map<String, Object> map = new HashMap<>();
+		map.put("url", "/springboot/image/"+upload.getOriginalFilename()); //not null
+		map.put("uploaded", 1); // allow null
+		map.put("uploadedPercent", 1); // allow null
+		map.put("error", "error"); // allow null
+		return map;
+	}
+
+// request uploaded image method (is in upload method's response.url)
+@GetMapping("/image/{name}")
+	public ResponseEntity<byte[]> image(@PathVariable("name")String name) throws IOException{
+		File file = new File("/users/chengyuxing/其他/"+name);
+		FileInputStream in = new FileInputStream(file);
+		byte[] buffer = new byte[in.available()];
+		in.read(buffer);
+		in.close();
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.IMAGE_PNG);
+		return new ResponseEntity<byte[]>(buffer, headers, HttpStatus.OK);
+	}
+```
+
+
+
 ## Update Logs
 
-- `2018-7-16 14:23` fixed the ngModel bug.
-- `2018-7-16 18:05` fixed the BalloonEditor's toolbar handle bug.
+- **2018-7-16 14:23:**  fixed the ngModel bug.
+- **2018-7-16 18:05:**  fixed the BalloonEditor's toolbar handle bug.
+- **2018-7-18 11:43:** update README.md of the uploadAdapter document.
 
