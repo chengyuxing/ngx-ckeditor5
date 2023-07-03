@@ -1,3 +1,7 @@
+# Not update anymore
+
+Use official version `@ckeditor/ckeditor5-angular` instead.
+
 # ngx-ckeditor5
 
 The CKEditor5 component for angular(2.x,4.x,5.x,6.x).
